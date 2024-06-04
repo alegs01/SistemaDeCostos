@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SistemaDeCostos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titulo">Bienvenido al Sistema De Costos</h1>
+    <div>
+        
+        <header>
+            <h1>Supermercado Online</h1>
+            
+        </header>
+        <h3>Elige los productos que deseas comprar:</h3>
+        <main>
+            <section id="products">
+                <h2>Productos</h2>
+                <div class="product">
+                    <img src="imagenes/leche.png" alt="Leche" class="product-image">
+                    <h3>Leche</h3>
+                    <p>Peso: 1 Kg</p>
+                    <p>Precio: $1000</p>
+                    <button onclick="addToCart('Leche', 1000, 1)">Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="imagenes/pan.png" alt="Pan" class="product-image">
+                    <h3>Pan</h3>
+                    <p>Peso: 1 Kg</p>
+                    <p>Precio: $2000</p>
+                    <button onclick="addToCart('Pan', 2000, 1)">Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="imagenes/huevos.png" alt="Huevos" class="product-image">
+                    <h3>Huevos</h3>
+                    <p>Peso: 0.5 Kg</p>
+                    <p>Precio: $1500</p>
+                    <button onclick="addToCart('Huevos', 1500, 0.5)">Agregar al carrito</button>
+                </div>
+
+                <div class="product">
+                    <img src="imagenes/aceite.png" alt="Aceite" class="product-image">
+                    <h3>Aceite</h3>
+                    <p>Peso: 0.75 Kg</p>
+                    <p>Precio: $3000</p>
+                    <button onclick="addToCart('Aceite', 3000, 0.75)">Agregar al carrito</button>
+                </div>
+
+                <div class="product">
+                    <img src="imagenes/bebida.png" alt="Bebida" class="product-image">
+                    <h3>Bebida</h3>
+                    <p>Peso: 1.5 Kg</p>
+                    <p>Precio: $1300</p>
+                    <button onclick="addToCart('Bebida', 3000, 1.5)">Agregar al carrito</button>
+                </div>
+
+                <div class="product">
+                    <img src="imagenes/tomate.png" alt="Tomate" class="product-image">
+                    <h3>Tomate</h3>
+                    <p>Peso: 1 Kg</p>
+                    <p>Precio: $300</p>
+                    <button onclick="addToCart('Tomate', 3000, 1)">Agregar al carrito</button>
+                </div>
+                <!-- Añadir más productos aquí -->
+            </section>
+            <section id="cart">
+                <h2>Carrito de Compras</h2>
+                <ul id="cart-items">
+                    <!-- Los artículos del carrito aparecerán aquí -->
+                </ul>
+                <p>Cantidad: <span id="cartCount">0</span></p>
+                <p>Peso: <span id="cartPeso">0</span></p>
+                <div id="discount-message"></div>
+                <div id="mensajeImpuesto"></div>
+                <p>Total: $<span id="total">0</span></p>
+                <input type="text" id="descuento" placeholder="Ingrese su codigo">
+                <button class="cart-button">Aplicar descuento</button>
+                <button id='btnPagar' class="cart-button" onclick="pagar()">Pagar</button>
+                <button class="modal-button" onclick="openModal()">Ver Descuentos</button>
+            </section>
+        </main>
+        
+    </div>
+    <!-- Ventana -->
+    <div id="discountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Descuentos por Cantidad</h2>
+            <ul>
+                <li>10 productos: 5% de descuento</li>
+                <li>30 productos: 20% de descuento</li>
+                <li>50 productos: 30% de descuento</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
