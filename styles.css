@@ -40,15 +40,15 @@ section {
 }
 
 .product {
-    width: 130px; /* Ancho específico */
-    height: 248.750px; /* Alto específico */
+    width: 130px;
+    height: 248.750px;
     border: 1px solid #ccc;
     border-radius: 3%;
     padding: 1em;
     margin-bottom: 1em;
     background-color: rgba(255, 255, 255, 0.906);
     display: inline-block;
-    text-align: center; /* Alinea el contenido dentro del contenedor del producto */
+    text-align: center;
 }
 
 .product:hover {
@@ -57,6 +57,11 @@ section {
 
 .product-image {
     width: 100px;
+    height: 100px;
+}
+
+.product-imageBebida {
+    width: auto;
     height: 100px;
 }
 
@@ -97,23 +102,23 @@ button:hover {
     padding: 0;
 }
 
-/* Modal styles */
 .modal-button {
-    background-color: #ff6347; /* Tomato color */
+    background-color: #ff6347;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.646);
     bottom: 1em;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
 .modal-button:hover {
-    background-color: #ff4500; /* Darker tomato color */
+    background-color: #ff4500;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px); /* Slightly move up */
+    transform: translateY(-2px);
 }
 
 .modal-button:active {
@@ -122,7 +127,6 @@ button:hover {
     transform: translateY(0);
 }
 
-/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -179,3 +183,31 @@ footer {
     font-weight: bold;
     margin-top: 10px;
 }
+
+#mensajeEnvio {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#mensajeCodigo {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#finalTotal {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-imageCart {
+    height: 30px;
+    width: 30px;
+}   
+
+#aplicar {
+    position: inherit;
+    margin-top: 20px;
+}
+
