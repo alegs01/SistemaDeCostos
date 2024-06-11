@@ -211,3 +211,20 @@ footer {
     margin-top: 20px;
 }
 
+.btnProducto:disabled {
+    background-color: #dddddd; /* Cambiar color de fondo */
+    color: #aaaaaa; /* Cambiar color del texto */
+    cursor: not-allowed; /* Cambiar cursor */
+}
+
+#btnAplicar:disabled {
+    background-color: #dddddd; /* Cambiar color de fondo */
+    color: #aaaaaa; /* Cambiar color del texto */
+    cursor: not-allowed; /* Cambiar cursor */
+}
+
+#btnPagar:disabled {
+    background-color: #dddddd; /* Cambiar color de fondo */
+    color: #aaaaaa; /* Cambiar color del texto */
+    cursor: not-allowed; /* Cambiar cursor */
+}
