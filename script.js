@@ -1,8 +1,8 @@
 let cart = [];
 let total = 0;
 let cartCount = 0;
-let pesoTotal = 0; // Variable para almacenar el peso total de los productos
-let subtotal = 0; // Variable para almacenar el subtotal antes de aplicar descuentos
+let pesoTotal = 0; 
+let subtotal = 0;
 let discountedTotal = 0;
 let totalEnvio = 0;
 let subTotalEnvio = 0;
@@ -34,23 +34,23 @@ function updateCart() {
     });
 
     if (cartCount >= 10 && cartCount < 20) {
-        discountedTotal = Math.round(subtotal * 0.9); // Calcular el total con descuento del 10% y redondearlo
+        discountedTotal = Math.round(subtotal * 0.9);
         discountMessage = 'Se aplicó un descuento por cantidad del 10%.';
     } else if (cartCount >= 20 && cartCount < 30) {
-        discountedTotal = Math.round(subtotal * 0.8); // Calcular el total con descuento del 20% y redondearlo
+        discountedTotal = Math.round(subtotal * 0.8);
         discountMessage = 'Se aplicó un descuento por cantidad del 20%.';
     } else if (cartCount >= 30) {
-        discountedTotal = Math.round(subtotal * 0.7); // Calcular el total con descuento del 30% y redondearlo
+        discountedTotal = Math.round(subtotal * 0.7);
         discountMessage = 'Se aplicó un descuento  por cantidad del 30%.';
     }
 
     if (discountedTotal > 0) {
-        total = discountedTotal; // Establecer el total como el total con descuento si hay descuento
+        total = discountedTotal; 
     } else {
-        total = subtotal; // Si no hay descuento, establecer el total como el subtotal
+        total = subtotal;
     }
 
-    document.getElementById('total').textContent = total; // Mostrar el total redondeado
+    document.getElementById('total').textContent = total;
 
     const discountMessageElement = document.getElementById('discount-message');
     discountMessageElement.textContent = discountMessage;
@@ -67,7 +67,7 @@ function calcularIVA() {
 
 //Botón Pagar
 function pagar() {
-    if (total === 0) { // Utiliza === para verificar la igualdad y asegurarte de que la alerta aparezca solo una vez
+    if (total === 0) {
         alert('No ha agregado ningún producto al carro');
     } else {
         document.getElementById('btnPagar').disabled = true;
@@ -147,7 +147,7 @@ function descuento() {
     
     if (aplicarDscto === '123') {
         document.getElementById('btnAplicar').disabled = true;
-        total = Math.round(total * 0.9); // Aplicar un descuento del 10% y redondearlo
+        total = Math.round(total * 0.9);
         console.log(total);
         document.getElementById('mensajeCodigo').textContent = 'Se ha aplicado un código de descuento del 10%.';
     } else {

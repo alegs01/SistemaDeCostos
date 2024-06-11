@@ -212,19 +212,19 @@ footer {
 }
 
 .btnProducto:disabled {
-    background-color: #dddddd; /* Cambiar color de fondo */
-    color: #aaaaaa; /* Cambiar color del texto */
-    cursor: not-allowed; /* Cambiar cursor */
+    background-color: #dddddd;
+    color: #aaaaaa;
+    cursor: not-allowed;
 }
 
 #btnAplicar:disabled {
-    background-color: #dddddd; /* Cambiar color de fondo */
-    color: #aaaaaa; /* Cambiar color del texto */
-    cursor: not-allowed; /* Cambiar cursor */
+    background-color: #dddddd;
+    color: #aaaaaa;
+    cursor: not-allowed;
 }
 
 #btnPagar:disabled {
-    background-color: #dddddd; /* Cambiar color de fondo */
-    color: #aaaaaa; /* Cambiar color del texto */
-    cursor: not-allowed; /* Cambiar cursor */
+    background-color: #dddddd;
+    color: #aaaaaa;
+    cursor: not-allowed;
 }
