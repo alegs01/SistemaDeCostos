@@ -67,9 +67,20 @@ function calcularIVA() {
 
 //Botón Pagar
 function pagar() {
-    calcularIVA();
-    calculoEnvio();
+    if (total === 0) { // Utiliza === para verificar la igualdad y asegurarte de que la alerta aparezca solo una vez
+        alert('No ha agregado ningún producto al carro');
+    } else {
+        document.getElementById('btnPagar').disabled = true;
+        var botones = document.getElementsByClassName('btnProducto');
+    
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].disabled = true;
+        }
+        calcularIVA();
+        calculoEnvio();
+    }
 }
+
 
 document.getElementById('btnPagar').addEventListener('click', pagar);
 
@@ -131,9 +142,11 @@ window.onclick = function(event) {
 document.getElementById('btnAplicar').addEventListener('click', descuento);
 
 function descuento() {
+    
     aplicarDscto = document.getElementById('aplicar').value;
     
     if (aplicarDscto === '123') {
+        document.getElementById('btnAplicar').disabled = true;
         total = Math.round(total * 0.9); // Aplicar un descuento del 10% y redondearlo
         console.log(total);
         document.getElementById('mensajeCodigo').textContent = 'Se ha aplicado un código de descuento del 10%.';
@@ -143,4 +156,9 @@ function descuento() {
     }
 
     document.getElementById('total').textContent = total;
+}
+
+// Borrar carro
+function recargar() {
+    location.reload();
 }
